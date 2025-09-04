@@ -12,4 +12,12 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.mathJaxLib = 'https://www.wiris.net/demo/plugins/app/WIRISplugins.js?viewer=image';
 
 	 config.extraPlugins = 'mathjax,ckeditor_wiris';
+	   config.removePlugins = 'image,about,iframe,specialchar,emoticons,flash,smiley,pagebreak,preview,print,horizontalrule,stickies,blockselection,div,save,templates,showblocks,scayt,wsc,menubutton,contextmenu,find,selectall,copyformatting,removeformat';
+	 config.toolbarGroups = [
+		{ name: 'basicstyles', groups: [ 'Bold', 'Italic', 'Subscript', 'Superscript' ] },
+		{ name: 'insert',      groups: [ 'insert' ] },
+		{ name: 'tools',      groups: [ 'tools' ] },
+	];
+	
+	 
 };
