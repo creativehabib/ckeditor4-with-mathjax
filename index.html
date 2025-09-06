@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CkEditor</title>
+    <title>CKEditor with MathType</title>
     <script src="ckeditor/ckeditor.js"></script>
-     <script type="text/javascript" src="wiriscripts.js"></script>
+    <script src="wiriscripts.js"></script>
 </head>
 <body>
-    <div>
-        <textarea cols="30" rows="10" name="content" id="content" class="ckeditor"></textarea>
-    </div>
+    <textarea id="editor"></textarea>
+    <script>
+        CKEDITOR.replace('editor');
+    </script>
 </body>
 </html>
