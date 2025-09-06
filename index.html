@@ -15,8 +15,10 @@
         CKEDITOR.replace('editor', {
             extraPlugins: 'mathjax,ckeditor_wiris',
             mathJaxLib: 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_HTML',
+            // Allow MathML content required by MathType plugin.
+            allowedContent: true,
             toolbar: [
-                ['Bold', 'Italic', 'Mathjax', 'MathType', 'ChemType']
+                ['Bold', 'Italic', 'Mathjax', 'ckeditor_wiris_formulaEditor', 'ckeditor_wiris_formulaEditorChemistry']
             ]
         });
     </script>
