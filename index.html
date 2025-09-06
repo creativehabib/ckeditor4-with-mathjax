@@ -11,7 +11,12 @@
 <body>
     <textarea id="editor"></textarea>
     <script>
-        CKEDITOR.replace('editor');
+        CKEDITOR.replace('editor', {
+            extraPlugins: 'ckeditor_wiris',
+            toolbar: [
+                ['Bold', 'Italic', 'MathType', 'ChemType']
+            ]
+        });
     </script>
 </body>
 </html>
