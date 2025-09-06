@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CKEditor with MathType</title>
+    <title>CKEditor with MathJax and MathType</title>
     <script src="ckeditor/ckeditor.js"></script>
+    <!-- The MathJax plugin loads the MathJax library from the URL specified in the configuration. -->
     <!-- Load MathType integration script from the official CDN -->
     <script src="https://www.wiris.net/demo/plugins/app/WIRISplugins.js?viewer=image"></script>
 </head>
@@ -12,9 +13,10 @@
     <textarea id="editor"></textarea>
     <script>
         CKEDITOR.replace('editor', {
-            extraPlugins: 'ckeditor_wiris',
+            extraPlugins: 'mathjax,ckeditor_wiris',
+            mathJaxLib: 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_HTML',
             toolbar: [
-                ['Bold', 'Italic', 'MathType', 'ChemType']
+                ['Bold', 'Italic', 'Mathjax', 'MathType', 'ChemType']
             ]
         });
     </script>
